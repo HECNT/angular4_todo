@@ -1,0 +1,44 @@
+<!-- <h1>App work</h1>
+
+<a routerLink="/member">Member</a>
+<a routerLink="/product">Product</a>
+
+<router-outlet></router-outlet>
+
+<ul>
+  <li *ngFor = "let i of arr">{{i.id}}</li>
+</ul>
+
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let i of arr">
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="condicion; then firstTemplate else secondTemplate">
+    <h1>Hola mundo!</h1>
+</div>
+
+<ng-template #firstTemplate>first template</ng-template>
+<ng-template #secondTemplate>second template</ng-template> -->
+
+<div class="main">
+  <h1>Products</h1><br>
+  <div class="addItem">
+    <input type="text" [(ngModel)] = "newItem" placeholder="add item" class="addText">
+    <button (click)="pushItem()" type="button" name="button">Add item</button>
+  </div>
+  <ul>
+    <li *ngFor = "let i of items; let ind = index">
+      {{i.name}}
+      <span (click)='removeItem(ind)'>x</span>
+    </li>
+  </ul>
+</div>
